@@ -1,0 +1,182 @@
+.card-box{
+  width: 370px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px #d0d0d0, -1px -1px 3px #d0d0d0;
+  margin: 20px;
+  background-color: #fff;
+}
+
+#card-id{
+  color: #6d6d6d;
+  font-weight: 300;
+  background-color: #fff;
+}
+
+.card-head{
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title{
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.card-body{
+  background-color: #fff; 
+}
+
+.card-tags{
+  background-color: #fff;
+}
+
+.tag{
+  color: #6d6d6d;
+  border: 0.07px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 2.5px 3.5px 4px 0px ;
+  width: fit-content;
+  font-size: small;
+  background-color: #fff;
+}
+
+.card-user{
+  background-color: #fff;
+}
+
+.avatar-box{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.avatar-dp{
+  width: 20px;
+  height: 20px;
+  border: 0px solid #000000;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  background-color: #fff;
+}
+
+.avatar-user-status{
+  width: 7px;
+  height: 7px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgb(171, 171, 171);
+  
+}
+
+.status-available{
+  background-color: rgb(0, 255, 0);
+}
+
+.status-busy{
+  background-color: rgb(255, 242, 0);
+}
+
+.tray-head{
+  width:370px;
+  margin:15px;
+  padding: 0px 4px;
+}
+
+.tray-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tray-id{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tray-id span{
+  padding: 0px 4px;
+}
+
+.tray-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.body-container{
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  overflow-y: scroll;
+  height: 100vh - 80px;
+}
+
+.dropdownMenu{
+  position:absolute;
+  top:10px;
+  left: 105px;
+  background-color: #f4f5f8;
+  width: 100px;
+  /* border: 1px solid #000; */
+  box-shadow: 1px 1px 3px #d0d0d0, -1px -1px 3px #d0d0d0;
+  border-radius: 5px;
+  padding: 5px;
+  display:none; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.visisble{
+  display: flex;
+}
+
+.dropdown-box{
+  width: 100px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 0.5px solid #d7d7d7;
+  border-radius: 5px;
+  padding: 0px 5px;
+  position: relative;
+}
+
+.dropdownMenuItem{
+  padding-bottom: 5px;
+}
+
+.svgImg{
+  height: fit-content;
+  width: fit-content;
+  background-color: #fff;
+  display: inline;
+}
+
+.card-title span {
+  background-color: #fff;  
+}
+
+.card-title img{
+  height: 20px;
+  margin-right: 5px;
+}
