@@ -7,21 +7,24 @@ import Filter from "./assets/filter.svg";
 import DownArrow from "./assets/arrow_down.svg";
 import Dropdown from "./components/dropdown.js";
 import DisplayProvider from "./components/DisplayContext.js";
+import { UseDisplay } from "./components/DisplayContext.js";
 
 const Display = ({ visible }) => {
   const classForBox = `category-box ${visible ? "visible" : ""}`;
-  const grouping = ["status", "user", "priority"];
-  const ordering = ["priority", "title"];
+  const groups = ["status", "user", "priority"];
+  const orders = ["priority", "title"];
+
+  const { grouping, ordering } = UseDisplay();
 
   return (
     <div className={classForBox}>
       <div className="category grouping">
         <span>Grouping</span>
-        <Dropdown name={"group"} list={grouping} />
+        <Dropdown current={groups[grouping]} name={"group"} list={groups} />
       </div>
       <div className="category ordering">
         <span> Ordering </span>
-        <Dropdown name={"order"} list={ordering} />
+        <Dropdown current={orders[ordering]} name={"order"} list={orders} />
       </div>
     </div>
   );

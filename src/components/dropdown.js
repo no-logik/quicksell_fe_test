@@ -29,7 +29,7 @@ const DropdownMenu = ({ list, visible, type }) => {
   );
 };
 
-const Dropdown = ({ name, list }) => {
+const Dropdown = ({ current, name, list }) => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   // const something = UseDisplay();
@@ -43,7 +43,7 @@ const Dropdown = ({ name, list }) => {
 
   return (
     <div className="dropdown-box" onClick={toggleDropdownMenu}>
-      {name}
+      {current}
       <img src={DownArrow} alt="" />
       <DropdownMenu type={name} list={list} visible={menuVisible} />
     </div>

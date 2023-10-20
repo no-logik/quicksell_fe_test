@@ -22,7 +22,9 @@ const TrayUser = ({ trayIconText, cards, sort }) => {
             <Avatar available={true} name={trayIconText} />
           </span>
           <span className="tray-group">{trayIconText}</span>
-          <span className="tray-card-count">0</span>
+          <span className="tray-card-count">
+            {sort === 1 ? newCardsTitle.length : newCardsTitle.length}
+          </span>
         </div>
         <div className="tray-control">
           <span className="tray-add">

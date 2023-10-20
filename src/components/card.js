@@ -29,7 +29,7 @@ export const Avatar = ({ available, name }) => {
 };
 
 export const Card = ({ cardDetails, users }) => {
-  const { id, userId, title, tag } = cardDetails;
+  const { id, userId, title, tag, status } = cardDetails;
   // console.log(userName);
 
   const findUserName = (userId, users) => {
@@ -38,6 +38,12 @@ export const Card = ({ cardDetails, users }) => {
   };
 
   const userName = findUserName(userId, users);
+
+  // const icon = categories[0].find((ele) => {
+  //   return ele.trayGroup === status;
+  // });
+
+  // <img className="svgImg" src={icon.trayIcon} alt="" />
 
   return (
     <div className="card-box">
@@ -48,7 +54,9 @@ export const Card = ({ cardDetails, users }) => {
         </div>
       </div>
       <div className="card-body">
-        <div className="card-title">{title}</div>
+        <div className="card-title">
+          <span>{title}</span>
+        </div>
         <div className="card-details">
           <div className="card-tags">
             {tag.map((ele) => {
