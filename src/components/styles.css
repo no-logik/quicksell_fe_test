@@ -56,6 +56,7 @@
   height: 20px;
   background-color: #fff;
   box-shadow: none;
+  
 }
 
 .avatar-dp{
@@ -123,9 +124,14 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  overflow-y: scroll;
+  overflow: scroll;
+  -ms-overflow-style: none;
   height: 100vh - 80px;
 }
+
+/* .body-container::-webkit-scrollbar{
+  width:0 !important;
+} */
 
 .dropdownMenu{
   position:absolute;
