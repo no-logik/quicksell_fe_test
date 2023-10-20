@@ -12,8 +12,9 @@ export const Avatar = ({ available, name }) => {
   const initials = nameArray[0][0] + nameArray[nameArray.length - 1][0];
 
   const colorArr = [225, 225, 225];
+
   for (let i = 0; i < 3; i++) {
-    colorArr[i] = Math.floor(Math.random() * 225);
+    colorArr[i] = Math.floor(Math.random() * 225 + 150);
   }
 
   const color = `rgb(${colorArr[0]},${colorArr[1]},${colorArr[2]})`;
