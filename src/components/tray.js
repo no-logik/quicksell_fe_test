@@ -1,8 +1,5 @@
-import React from "react";
-
 import Options from "../assets/options.svg";
 import Add from "../assets/add.svg";
-
 import { Card, Avatar } from "./card";
 
 const Tray = ({ trayIcon, trayIconText, cards, sort, users }) => {

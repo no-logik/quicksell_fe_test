@@ -1,6 +1,7 @@
-import React from "react";
-
 import Tag from "./tag";
+import { groups } from "./categories";
+import { UseDisplay } from "./DisplayContext";
+
 import "./styles.css";
 
 export const Avatar = ({ available, name }) => {
@@ -30,8 +31,9 @@ export const Avatar = ({ available, name }) => {
 };
 
 export const Card = ({ cardDetails, users }) => {
+  const categories = groups();
+  const { grouping, ordering } = UseDisplay();
   const { id, userId, title, tag, status } = cardDetails;
-  // console.log(userName);
 
   const findUserName = (userId, users) => {
     const user = users.find((ele) => ele.id === userId);
@@ -40,11 +42,9 @@ export const Card = ({ cardDetails, users }) => {
 
   const userName = findUserName(userId, users);
 
-  // const icon = categories[0].find((ele) => {
-  //   return ele.trayGroup === status;
-  // });
-
-  // <img className="svgImg" src={icon.trayIcon} alt="" />
+  const icon = categories[0].find((ele) => {
+    return ele.trayGroup === status;
+  });
 
   return (
     <div className="card-box">
@@ -56,6 +56,7 @@ export const Card = ({ cardDetails, users }) => {
       </div>
       <div className="card-body">
         <div className="card-title">
+          {grouping === 2 ? <img className="svgImg" src={icon.trayIcon} alt="" /> : ""}
           <span>{title}</span>
         </div>
         <div className="card-details">

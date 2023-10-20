@@ -1,10 +1,7 @@
-import React from "react";
-
-import Options from "../assets/options.svg";
-import Add from "../assets/add.svg";
-
 import { Avatar } from "./card";
 import CardUser from "./card-user";
+import Options from "../assets/options.svg";
+import Add from "../assets/add.svg";
 
 const TrayUser = ({ trayIconText, cards, sort }) => {
   const newCardsTitle = [...cards].sort((a, b) => {
@@ -12,7 +9,6 @@ const TrayUser = ({ trayIconText, cards, sort }) => {
   });
 
   const newCardsPriority = [...cards].sort((a, b) => b.priority - a.priority);
-  // console.log(cards);
 
   return (
     <div className="tray">

@@ -1,9 +1,7 @@
-import React from "react";
-
 import Tag from "./tag";
-import "./styles.css";
-
 import { groups } from "./categories";
+
+import "./styles.css";
 
 const CardUser = ({ cardDetails }) => {
   const { id, title, tag, status } = cardDetails;

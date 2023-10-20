@@ -58,5 +58,3 @@ const priority = [
 ];
 
 export const groups = () => [status, "user", priority];
-
-// { status: status, user: "user", priority: priority };

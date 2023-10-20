@@ -1,16 +1,12 @@
-import React from "react";
-
-import "./styles.css";
-
-// import { Card } from "./card";
 import Tray from "./tray";
 import TrayUser from "./tray-user";
 import { groups } from "../components/categories";
 import { UseDisplay } from "./DisplayContext";
 
+import "./styles.css";
+
 const Body = ({ data }) => {
   const { grouping, ordering } = UseDisplay();
-
   const categories = groups();
 
   if (grouping !== 1) {

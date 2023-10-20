@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-import "./styles.css";
 import DownArrow from "../assets/arrow_down.svg";
 import { UpdateDisplay } from "./DisplayContext";
+
+import "./styles.css";
 
 const DropdownMenu = ({ list, visible, type }) => {
   const classFordropdown = `dropdownMenu ${visible ? "visible" : ""}`;
@@ -31,11 +32,6 @@ const DropdownMenu = ({ list, visible, type }) => {
 
 const Dropdown = ({ current, name, list }) => {
   const [menuVisible, setMenuVisible] = useState(false);
-
-  // const something = UseDisplay();
-  // console.log(something);
-
-  // const list = ["Status", "User", "Priority"];
 
   const toggleDropdownMenu = () => {
     setMenuVisible((prevMenuVisible) => (prevMenuVisible = !menuVisible));

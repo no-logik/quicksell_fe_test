@@ -59,7 +59,6 @@ const App = () => {
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
-  // console.log(data);
 
   return (
     <DisplayProvider>
@@ -81,25 +80,3 @@ const App = () => {
 };
 
 export default App;
-
-// const nonUserTrays = categories[grouping].map((ele, i) => {
-//   <Tray
-//     key={i}
-//     trayIcon={ele.trayIcon}
-//     trayIconText={ele.trayGroup}
-//     sort={ordering}
-//     cards={data.tickets.filter((e) => {
-//       if (grouping == 0) return e.status === ele.trayGroup;
-//       else if (grouping == 2) return e.priority == ele.priority;
-//     })}
-//   />;
-// });
-
-// const userTrays = data.users.map((ele, i) => (
-//   <TrayUser
-//     key={i}
-//     trayIconText={ele.name}
-//     sort={ordering}
-//     cards={data.tickets.filter((e) => e.id == ele.userId)}
-//   />
-// ));
