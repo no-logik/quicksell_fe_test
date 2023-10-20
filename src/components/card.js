@@ -11,9 +11,18 @@ export const Avatar = ({ available, name }) => {
   const nameArray = name.split(" ");
   const initials = nameArray[0][0] + nameArray[nameArray.length - 1][0];
 
+  const colorArr = [225, 225, 225];
+  for (let i = 0; i < 3; i++) {
+    colorArr[i] = Math.floor(Math.random() * 225);
+  }
+
+  const color = `rgb(${colorArr[0]},${colorArr[1]},${colorArr[2]})`;
+
   return (
     <div className="avatar-box">
-      <div className="avatar-dp">{initials}</div>
+      <div className="avatar-dp" style={{ backgroundColor: color }}>
+        {initials}
+      </div>
       <div className={availabilityClass}></div>
     </div>
   );

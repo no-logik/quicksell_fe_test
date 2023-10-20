@@ -34,13 +34,13 @@ const Tray = ({ trayIcon, trayIconText, cards, sort, users }) => {
       {sort === 1 ? (
         <div className="tray-body">
           {newCardsTitle.map((ele, idx) => {
-            return <Card key={`${ele.id}${idx}`} cardDetails={ele} users={users} />;
+            return <Card key={idx} cardDetails={ele} users={users} />;
           })}
         </div>
       ) : (
         <div className="tray-body">
           {newCardsPriority.map((ele, idx) => {
-            return <Card key={`${ele.id}${idx}`} cardDetails={ele} users={users} />;
+            return <Card key={ele.id} cardDetails={ele} users={users} />;
           })}
         </div>
       )}
