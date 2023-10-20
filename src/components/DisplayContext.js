@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 const DisplayContext = React.createContext();
 const UpdateDisplayContext = React.createContext();
@@ -12,7 +12,11 @@ export const UpdateDisplay = () => {
 };
 
 const DisplayProvider = ({ children }) => {
-  const [filters, setFilters] = useState({ grouping: 0, ordering: 0 });
+  const obj = {
+    grouping: Number(localStorage.getItem("grouping")) || 0,
+    ordering: Number(localStorage.getItem("ordering")) || 0,
+  };
+  const [filters, setFilters] = useState(obj);
 
   const setFilter = (idx, cat) => {
     switch (cat) {

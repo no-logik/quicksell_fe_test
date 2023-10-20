@@ -18,6 +18,7 @@ const DropdownMenu = ({ list, visible, type }) => {
             key={i}
             onClick={() => {
               toggleDisplay(i, type);
+              localStorage.setItem(type === "group" ? "grouping" : "ordering", i);
             }}
             className="dropdownMenuItem"
           >
